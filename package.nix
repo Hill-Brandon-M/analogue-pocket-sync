@@ -25,8 +25,8 @@ in appimageTools.wrapType2 rec {
     
     install -m 444 -D ${appimageContents}/"Pocket Sync.desktop" -t $out/share/applications
     
-    # substituteInPlace $out/share/applications/${pname}.desktop \
-    #   --replace 'Exec=AppRun' 'Exec="${pname}"'
+    substituteInPlace $out/share/applications/"Pocket Sync.desktop" \
+      --replace 'Exec=pocket-sync' 'Exec=${pname}'
     
     cp -r ${appimageContents}/usr/share/icons $out/share
   '';
