@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "A Nix Flake package for the Pocket-Sync Companion Software for the Analogue Pocket ";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
