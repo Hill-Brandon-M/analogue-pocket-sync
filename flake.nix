@@ -33,8 +33,5 @@
       analogue-pocket-sync = pkgsBySystem.${system}.analogue-pocket-sync;
       default = pkgsBySystem.${system}.analogue-pocket-sync;
     });
-
-    # nixosModules = import ./nixos-modules { overlays = overlayList; };      
-
   };
 }
