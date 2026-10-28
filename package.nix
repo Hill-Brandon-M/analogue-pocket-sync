@@ -7,11 +7,11 @@
 
 let
   pname = "analogue-pocket-sync";
-  version = "5.9.1";
+  version = "7.1.1";
 
   src = fetchurl {
     url = "https://github.com/neil-morrison44/pocket-sync/releases/download/v${version}/Pocket.Sync_${version}_amd64.AppImage";
-    hash = "sha256-g2zvVq4R5ZXSv+LDwHGhoMN/1YlkAO1EYJcjT4KhVYo=";
+    hash = "sha256-lML7w/xFqUOhyV9kQz+mZgX3bsXoxJrxODG9m7euUvU=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };
@@ -38,7 +38,7 @@ in appimageTools.wrapType2 rec {
     downloadPage = "https://github.com/neil-morrison44/pocket-sync/releases";
     license = lib.licenses.gpl3;
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
-    # maintainers = with lib.maintainers; [ onny ];
+    # maintainers = with lib.maintainers; [ ];
     platforms = [ "x86_64-linux" ];
   };
 }
